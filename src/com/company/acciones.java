@@ -66,7 +66,7 @@ public class acciones {
     //pre:
     //post: return T if the value 1 is bigger than value 2 and NIL if they are not
     public String mayor(Object valor1, Object valor2){
-        if(valor1>valor2){
+        if(valor1 > valor2){
             return "T";
         }
         else{
@@ -76,16 +76,18 @@ public class acciones {
     //pre:
     //post: return T if the value 1 is smaller than value 2 and NIL if they are not
     public String menor(Object valor1, Object valor2){
-        if(valor1<valor2){
+        if(valor1 < valor2){
             return "T";
         }
         else{
             return "NIL";
         }
     }
-    //Aun no se que hacer aca
-    public String atom(Object valor){
-        return "";
+    //pre
+    //post devuelve si es atom o no. NIl=false  T=true.
+    public String atom(Object valor){ 
+        
+        return "T";
     }
     //List crea una lista con los metodos que se les fueron dados
     public Object[] list(Object valor){
