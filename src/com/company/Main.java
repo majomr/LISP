@@ -25,8 +25,6 @@ public class Main {
        
         int correcto = 1;
         while(correcto == 1) {
-           
-            
             //si hay mas parentesis abiertos o cerrados el codigo esta mal escrito
             if (contadorparentesisA != contadorparentesisC) {
                 
