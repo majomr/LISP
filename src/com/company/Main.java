@@ -32,13 +32,15 @@ public class Main {
                 System.out.println("El codigo es incorrecto. La cantidad de parentesis que abren y cierran no es la misma.");
                 correcto = 0;
             }
+           
+            
             // separa el conjunto de instrucciones en la primera instruccion y asi seguira
             String[] instruccion = l.separar(codigo);
             // si el codigo todavia tiene parentesis adentro
             int parentesis = 0;
             for (int i = 0; i < instruccion.length; ++i) {
                 if (instruccion[i].equals('(')||instruccion[i].equals(')')) {
-                    parentesis = parentesis + 1;
+                    parentesis += 1;
                 }
             }
             while(parentesis!=0) {

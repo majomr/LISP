@@ -16,7 +16,7 @@ public class acciones {
 		boolean esNumero = false; //Cambia cuando se encuentra con un numero en el array
 		boolean error = false; //Nos indica cuando ya no hay nada mas que recorrer en el array o hay un error en la escritura del código o en el código ingresado
 		int contador = 0; //Nos indica cual de los elementos del aaray estamos leyendo
-		while(contador< datos.lenght && !error){ //mientras que el contador sea menor que el tamaño del array y el error sea falso
+		while(contador< datos.length && !error){ //mientras que el contador sea menor que el tamaño del array y el error sea falso
 			if(!esNumero){//si es numero es falso
 				if(datos[contador].equals("+")){
 					contador++;
@@ -35,7 +35,7 @@ public class acciones {
 						int numero2 = numeros.get(1);//se guarda el numero de la posicion 1 en una variable
 						numeros.remove(0);//se remueve la posicion 0
 						numeros.remove(0);//se remueve la posicon 0
-						numeros.add(operacionesAritmeticas(1,numero1,numero2);//se añade el resultado al array luego de sumar los dos numeros
+						numeros.add(operacionesAritmeticas(1,numero1,numero2));//se añade el resultado al array luego de sumar los dos numeros
 					}
 					return numeros.get(0);//se devuelve el resultado de la suma
 				}
@@ -57,7 +57,7 @@ public class acciones {
 							int numero2 = numeros.get(1);
 							numeros.remove(0);
 							numeros.remove(0);
-							numeros.add(operacionesAritmeticas(2,numero1,numero2);
+							numeros.add(operacionesAritmeticas(2,numero1,numero2));
 						}
 						return numeros.get(0);
 					}
@@ -79,7 +79,7 @@ public class acciones {
 								int numero2 = numeros.get(1);
 								numeros.remove(0);
 								numeros.remove(0);
-								numeros.add(operacionesAritmeticas(3,numero1,numero2);
+								numeros.add(operacionesAritmeticas(3,numero1,numero2));
 							}
 							return numeros.get(0);
 						}
@@ -101,7 +101,7 @@ public class acciones {
 									int numero2 = numeros.get(1);
 									numeros.remove(0);
 									numeros.remove(0);
-									numeros.add(operacionesAritmeticas(4,numero1,numero2);
+									numeros.add(operacionesAritmeticas(4,numero1,numero2));
 								}
 								return numeros.get(0);
 							}
