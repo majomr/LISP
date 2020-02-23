@@ -10,9 +10,26 @@ public class acciones {
     public String defun(){
         return "";
     }
-
-    public int aritmetica(){
-        return 0;
+	//Pense en que aqui podiamos aceptar tres parametros, uno en donde decidde si sumar, restar bla bla y los dos cosos que quiere sumar y restar
+    //Pre: se ingresan 3 numeros, el que decide la operacion 1= suma, 2=resta, 3=multiplicacion, 4= ivisión
+	//Post: se devuelve el resultado de cualquiera de la operación
+	public int aritmetica(int operacion, int a, int b){
+        if(operacion==1){
+			return a+b;
+		}
+		else{
+			if(operacion==2){
+				return a-b;
+			}
+			else{
+				if(operacion == 3){
+					return a*b;
+				}
+				else{
+					return a/b;
+				}
+			}
+		}
     }
     // pre 
     // post returns whatever that followed the instruction quote without evaluating whats inside
@@ -65,7 +82,7 @@ public class acciones {
     }
     //pre:
     //post: return T if the value 1 is bigger than value 2 and NIL if they are not
-    public String mayor(Object valor1, Object valor2){
+    public String mayor(int valor1, int valor2){
         if(valor1 > valor2){
             return "T";
         }
@@ -75,7 +92,7 @@ public class acciones {
     }
     //pre:
     //post: return T if the value 1 is smaller than value 2 and NIL if they are not
-    public String menor(Object valor1, Object valor2){
+    public String menor(int valor1, int valor2){
         if(valor1 < valor2){
             return "T";
         }
