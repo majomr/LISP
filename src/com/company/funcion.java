@@ -1,11 +1,10 @@
 
-
-public class lector {
-    public lector(){
+public class funcion {
+    public funcion(){
 
     }
     //va a separar cada instruccion y si es necesario llamarse a ella misma (recursion)
-    public String[] separar(String conjunto){
+    public void separar(String conjunto){
         String[] data = new String[conjunto.length()];
         //lo separo en un array solo para ver en que posicion y cuantos parentesis hay para separar
         for (int i = 0; i<conjunto.length() ; i++){
@@ -23,6 +22,5 @@ public class lector {
                 int posicionInicial = i;
             }
         }
-        return null;
     }
 }

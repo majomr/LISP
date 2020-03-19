@@ -1,11 +1,19 @@
-package com.company;
 
 public class controlador {
     public controlador(){
 
     }
     // recibe la instruccion individual y decide que accion tomar. En el main se recibe que accion tomar y se llama desde el main
-    public String decidir(Object[] instruccion){
-        return "";
+    public String decidir(String instrucciones){
+        if(instrucciones.contains("defun")==true){
+			return "defun";
+		}
+		else if(instrucciones.contains("defun")!=true && instrucciones.contains("=")==true){
+			return "igual";
+		}
+		else if(instrucciones.contains("defun")!=true && instrucciones.contains("=")!=true){
+			return "aritmetica";
+		}
+		else return "";
     }
 }
