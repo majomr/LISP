@@ -37,7 +37,7 @@ public class Main {
 					System.out.println("Ingrese el valor de: "+f.getParametro());
 					String p = scanner.nextLine(); 
 					f.setParametro(p); 
-					System.out.println(f.revisar());
+					//System.out.println(f.revisar());
 					System.out.println(f.trabajar());
 					correcto = 0;
 				}

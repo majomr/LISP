@@ -29,7 +29,6 @@ public class funcion {
 						for(j = i+1; j < codigo.length(); j++){
 							String ssiguiente = codigo.substring(j,j+1);
 							char ch = ssiguiente.charAt(0);
-							//ESTO LO TENGO QUE ARREGLAR PORQUE NO FUNCIONA VER SI ES LETRA O NO 
 							if(Character.isDigit(ch)||Character.isLetter(ch)||ssiguiente.equals(".")){
 								simbolo = simbolo + ssiguiente; 
 								//lleva la cuenta de los digitos del numero o letras 
@@ -59,33 +58,55 @@ public class funcion {
 		}
     }
     //va a separar cada instruccion y si es necesario llamarse a ella misma (recursion)
+	int recursivo = 0;
     public String trabajar(){
 		//(DEFUN FTOC (TEMP)(/ (- TEMP 32) 0.56))
 		//(defun fibonacci (n) (cond ( (= n 0) 0) ( (= n 1) 1) ((>= n 2) (+ (fibonacci (- n 1)) (fibonacci (- n 2))))))
 		
-		//en lugar del parametro se pone la variable que ingreso el usuario 
-		for(int i = 0; i<expresion.length; i++){
-			if(expresion[i].equals(parametro))
-			{
-				expresion[i] = valorParametro;
+		//en lugar del parametro se pone la variable que ingreso el usuario si no usa recursividad
+		 recursivo = 0;
+		for (int i = 0; i<expresion.length; i++){
+			if(expresion[i].equals(nombre)){
+				recursivo = recursivo +1;; 
 			}
 		}
-		//depende que tiene la expresion 
-		String expresionString ="";
-		for(int i = 0; i<expresion.length;i++){
-			expresionString = expresionString + " "+ expresion[i]; 
-		}
-		
-		String decision = c.decidir(expresionString);
-		if (decision.equals("igual")){
-			return "";
-		}
-		else if(decision.equals("aritmetica")){
-			Aritmetica a = new Aritmetica();
-			return "Resultado: " + Double.toString(a.aritmetica(expresionString));
+		if(recursivo == 0){
+			for(int i = 0; i<expresion.length; i++){
+				if(expresion[i].equals(parametro))
+				{
+					expresion[i] = valorParametro;
+				}
+			}
+			//depende que tiene la expresion 
+			String expresionString ="";
+			for(int i = 0; i<expresion.length;i++){
+				expresionString = expresionString + " "+ expresion[i]; 
+			}
+			
+			String decision = c.decidir(expresionString);
+			if (decision.equals("igual")){
+				return "";
+			}
+			else if(decision.equals("aritmetica")){
+				Aritmetica a = new Aritmetica();
+				return "Resultado: " + Double.toString(a.aritmetica(expresionString));
+			}
+			else{
+				return "";
+			}
 		}
 		else{
-			return "";
+			int n = Integer.parseInt(valorParametro); 
+			//(cond ( (= n 0) 0) ( (= n 1) 1) ((>= n 2) (+ (fibonacci (- n 1)) (fibonacci (- n 2)))))
+			for(int i = 0; i<expresion.length;i++){
+				if(expresion[i].equalsIgnoreCase("cond")){
+					//inicia un if
+					condicion cond = new condicion(expresion, n, nombre);
+					return "Resultado: " + Integer.toString(cond.funcion(Integer.parseInt(valorParametro)));
+				}
+				else return null;
+			}
+			return null;
 		}
     }
 	
