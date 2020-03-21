@@ -1,9 +1,20 @@
+/**
+ * @author Maria Jose Morales 19145
+ * @author Maria Isabel Montoya 19169
+ * @author Luis Pedro Garcia 19344
+ */
 
 
 public class condicion {
 	String[] codigo;
 	int n;
 	String nombre;
+	/**
+	 * 
+	 * @param c
+	 * @param p
+	 * @param f
+	 */
     public condicion(String[] c, int p, String f){
 		codigo = c; 
 		n = p;

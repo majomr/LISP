@@ -1,3 +1,9 @@
+/**
+ * @author Maria Jose Morales 19145
+ * @author Maria Isabel Montoya 19169
+ * @author Luis Pedro Garcia 19344
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -5,7 +11,12 @@ public class Aritmetica {
     public Aritmetica(){
 
     }
-	
+	/**
+	 * Pre:
+	 * Post: Devuelve el calculo aritmetico
+	 * @param codigo
+	 * @return
+	 */
 	public double aritmetica(String codigo){
 		//separa el string en una lista
 		ArrayList<String>data = new ArrayList<String>(); 
@@ -77,6 +88,15 @@ public class Aritmetica {
 	
     //Pre: se ingresan 3 numeros, el que decide la operacion 1= suma, 2=resta, 3=multiplicacion, 4= ivisión
 	//Post: se devuelve el resultado de cualquiera de la operación
+	
+	
+	/**
+	 * 
+	 * @param operacion
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public double operacionesAritmeticas(String operacion, double a, double b){
         if(operacion.equalsIgnoreCase("+")){
 			return a+b;

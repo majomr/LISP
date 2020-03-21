@@ -1,3 +1,9 @@
+/**
+ * @author Maria Jose Morales 19145
+ * @author Maria Isabel Montoya 19169
+ * @author Luis Pedro Garcia 19344
+ */
+
 
 import java.util.Scanner;
 import java.util.Arrays;

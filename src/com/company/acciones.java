@@ -1,4 +1,11 @@
-package com.company;
+/**
+ * @author Maria Jose Morales 19145
+ * @author Maria Isabel Montoya 19169
+ * @author Luis Pedro Garcia 19344
+ */
+
+
+
 import java.util.ArrayList;
 
 public class acciones {
@@ -7,10 +14,16 @@ public class acciones {
     }
     // tiene todas las posibles instrucciones que puede tener
 
-    // no se si deberia ser void o String para devolver el resultado (creo que String)--------------------
+    
     public String defun(){
         return "";
     }
+    /**
+     * Pre:
+     * Post: Lo que el usuario quiera hacer
+     * @param datos
+     * @return
+     */
 	public int aritmetica(String[] datos){
 		ArrayList<Integer> numeros = new ArrayList<Integer>(); //Aqui se iran guardando los numeros del arrayList
 		boolean esNumero = false; //Cambia cuando se encuentra con un numero en el array
@@ -125,6 +138,13 @@ public class acciones {
 	//Pense en que aqui podiamos aceptar tres parametros, uno en donde decidde si sumar, restar bla bla y los dos cosos que quiere sumar y restar
     //Pre: se ingresan 3 numeros, el que decide la operacion 1= suma, 2=resta, 3=multiplicacion, 4= ivisión
 	//Post: se devuelve el resultado de cualquiera de la operación
+	/**
+	 * 
+	 * @param operacion
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public int operacionesAritmeticas(int operacion, int a, int b){
         if(operacion==1){
 			return a+b;
@@ -150,6 +170,12 @@ public class acciones {
     }
     // pre takes in an object that will be the value of a variable and the name of the variable that the user wants to define
     // post return a variable of type object
+    /**
+     * 
+     * @param name
+     * @param value
+     * @return
+     */
     public Object setQ(Object name, Object value){
         name=value;
         return name;
@@ -162,9 +188,13 @@ public class acciones {
     public String parametros(){
         return "";
     }
-    //Predicados de comparacion con necesidad de 2 parametros
-    //Pre : 
-    // Post: it retunrs T or NIL if the condition evaluated is correct
+    /**
+     * 
+     * @param predicado
+     * @param valor1
+     * @param valor2
+     * @return
+     */
     public String predicados(String predicado,Object valor1,Object valor2 ){
         predicado=predicado.toUpperCase();
         if(predicado.equals("EQUAL")){
@@ -182,8 +212,12 @@ public class acciones {
             }
         }
     }
-    //Pre:
-    //Post: return T if the two values given are equal and NIL if they are not
+   /**
+    * 
+    * @param valor1
+    * @param valor2
+    * @return
+    */
     public String equall(Object valor1, Object valor2){
         if(valor1==valor2){
             return "T";

@@ -1,3 +1,11 @@
+/**
+ * @author Maria Jose Morales 19145
+ * @author Maria Isabel Montoya 19169
+ * @author Luis Pedro Garcia 19344
+ */
+
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 //import java.lang.Character;
@@ -9,6 +17,11 @@ public class funcion {
 	String parametro;
 	String[] datos;
 	String[] expresion;
+	/**
+	 * Pre:
+	 * Post: Se define una funcion
+	 * @param c
+	 */
     public funcion(String c){
 		codigo = c; 
 		ArrayList<String>data = new ArrayList<String>(); 
